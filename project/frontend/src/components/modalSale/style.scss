@@ -1,0 +1,62 @@
+.modalSale {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 95%;
+	max-height: 90%;
+	height: auto;
+	margin: 5px;
+	background-color: #283142;
+	border-radius: 5px;
+
+	.header-inputs {
+		display: flex;
+		align-items: flex-start;
+    
+		h2 {
+			color: #676fff;
+			font-weight: 700;
+			margin: 11px;
+		}
+
+		input {
+			width: 280px;
+			padding: 12px;
+			margin: 5px;
+			border: 1px solid #384459;
+			border-radius: 5px;
+			background-color: #1b2531;
+			color: #9aaabe;
+		}
+		::-webkit-input-placeholder {
+			color: #9aaabe;
+		}
+	}
+
+	.header-scouts {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		width: 100%;
+
+		.header-scouts-titles {
+			font-size: 16px;
+			font-weight: 700;
+			color: #ffffff;
+		}
+	}
+
+	.tab {
+		display: none;
+		@media (min-width: 576px) {
+			display: inherit;
+		}
+	}
+
+	.desk {
+		display: none;
+		@media (min-width: 1024px) {
+			display: inherit;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+:root{
+  --white: #fffffff;
+  --blue-100: #102347;
+  --red-50: #090707;
+  --white-900: #F5F5F5;
+  --cyan-200: #283142;
+}
+
+body{
+  background-color: var(--white-900);
+}
+
+button{
+  cursor: pointer;
+}

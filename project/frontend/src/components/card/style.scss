@@ -1,0 +1,57 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .ul-sales{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+
+    .info{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 2px;
+      margin: 2px;
+      border-top: 1px solid #5F6E82;
+
+      &:nth-child(2n+1){
+        background-color: #242C3B;
+      }
+    }
+
+    .title{
+      margin: 3px;
+      font-size: 16px;
+      color: #CFCFCF;
+
+      &:nth-child(1){
+        transform: translateX(-3px);
+      }
+      &:nth-child(2){
+        transform: translateX(-1px);
+      }
+    }
+
+    .tab{
+      display: none;
+      @media (min-width: 576px){
+          display: inherit;
+      }
+    }
+
+    .desk{
+      display: none;
+      @media (min-width: 1024px){
+          display: inherit;
+      }
+    }
+
+    img{
+      transform: translateY(1.6px);
+    }
+  }
+}
