@@ -5,13 +5,23 @@
 	width: 95%;
 	max-height: 90%;
 	height: auto;
-	margin: 5px;
+	margin: 20px auto;
 	background-color: #283142;
 	border-radius: 5px;
+	
+	section{
+		overflow-y: scroll ;
+		box-sizing: content-box;
+		::-webkit-scrollbar {
+			display: hidden;
+		}
+	}
+
 
 	.header-inputs {
 		display: flex;
 		align-items: flex-start;
+
     
 		h2 {
 			color: #676fff;
@@ -60,3 +70,4 @@
 		}
 	}
 }
+

@@ -1,6 +1,9 @@
 import { Card } from "../card";
 import "./style.scss";
 
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 export const ModalSale = () => {
 	const data = [
 		{
@@ -39,14 +42,80 @@ export const ModalSale = () => {
 			total: "total",
 			notificar: "notificar",
 		},
+		{
+			ID: "2",
+			data: "data",
+			vendedor: "vendedo",
+			visitas: "visitas",
+			vendas: "vendas",
+			total: "total",
+			notificar: "notificar",
+		},
+		{
+			ID: "2",
+			data: "data",
+			vendedor: "vendedo",
+			visitas: "visitas",
+			vendas: "vendas",
+			total: "total",
+			notificar: "notificar",
+		},
+		{
+			ID: "2",
+			data: "data",
+			vendedor: "vendedo",
+			visitas: "visitas",
+			vendas: "vendas",
+			total: "total",
+			notificar: "notificar",
+		},
+		{
+			ID: "2",
+			data: "data",
+			vendedor: "vendedo",
+			visitas: "visitas",
+			vendas: "vendas",
+			total: "total",
+			notificar: "notificar",
+		},
+		{
+			ID: "2",
+			data: "data",
+			vendedor: "vendedo",
+			visitas: "visitas",
+			vendas: "vendas",
+			total: "total",
+			notificar: "notificar",
+		},
+		{
+			ID: "2",
+			data: "data",
+			vendedor: "vendedo",
+			visitas: "visitas",
+			vendas: "vendas",
+			total: "total",
+			notificar: "notificar",
+		},
 	];
 	return (
 		<>
 			<section className="modalSale">
 				<div className="modalSale header-inputs">
 					<h2>Vendas</h2>
-					<input placeholder="01/02/2022" />
-					<input placeholder="28/02/2022" />
+					{/* <input placeholder="01/02/2022" /> */}
+					{/* <input placeholder="28/02/2022" /> */}
+					<DatePicker
+						selected={new Date()}
+						onChange={(date: Date) => {}}
+						className="dsmeta-form-control"
+						dateFormat="dd/MM/yyyy"
+					/>
+					<DatePicker
+						selected={new Date()}
+						onChange={(date: Date) => {}}
+						className="dsmeta-form-control"
+						dateFormat="dd/MM/yyyy"
+					/>
 				</div>
 				<div className="modalSale header-scouts">
 					<span className="modalSale header-scouts-titles desk">ID</span>

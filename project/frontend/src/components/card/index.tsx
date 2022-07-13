@@ -1,6 +1,7 @@
 import "./style.scss";
 import notify from "../../assets/notify.png";
 import { Idata } from "./types";
+import { ButtonNotification } from "../buttonNotification";
 
 export const Card = ({ data }: Idata) => {
 	return (
@@ -16,7 +17,7 @@ export const Card = ({ data }: Idata) => {
 							<span className="card ul-sales title desk">{item?.vendas}</span>
 							<span className="card ul-sales title">{item?.total}</span>
 							<span className="card ul-sales title">
-								<img src={notify} alt="icone de notificão" />
+								<ButtonNotification />
 							</span>
 						</div>
 					))}
