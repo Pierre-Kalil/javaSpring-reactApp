@@ -1,5 +1,4 @@
 import "./style.scss";
-import notify from "../../assets/notify.png";
 import { Idata } from "./types";
 import { ButtonNotification } from "../buttonNotification";
 

@@ -3,9 +3,10 @@ import "./style.scss";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useState } from "react";
 
 export const ModalSale = () => {
-	const data = [
+	const data: any = [
 		{
 			ID: "1",
 			data: "data",
@@ -97,22 +98,25 @@ export const ModalSale = () => {
 			notificar: "notificar",
 		},
 	];
+	const min: any = new Date().setDate(new Date().getDate() - 365);
+	const max: Date = new Date();
+	const [minDate, setMinDate] = useState(min);
+	const [maxDate, setMaxDate] = useState(max);
+
 	return (
 		<>
 			<section className="modalSale">
 				<div className="modalSale header-inputs">
 					<h2>Vendas</h2>
-					{/* <input placeholder="01/02/2022" /> */}
-					{/* <input placeholder="28/02/2022" /> */}
 					<DatePicker
-						selected={new Date()}
-						onChange={(date: Date) => {}}
+						selected={minDate}
+						onChange={(date: Date) => setMinDate(date)}
 						className="dsmeta-form-control"
 						dateFormat="dd/MM/yyyy"
 					/>
 					<DatePicker
-						selected={new Date()}
-						onChange={(date: Date) => {}}
+						selected={maxDate}
+						onChange={(date: Date) => setMaxDate(date)}
 						className="dsmeta-form-control"
 						dateFormat="dd/MM/yyyy"
 					/>
@@ -126,7 +130,9 @@ export const ModalSale = () => {
 					<span className="modalSale header-scouts-titles">Total</span>
 					<span className="modalSale header-scouts-titles">Notificar</span>
 				</div>
-				<Card data={data} />
+				<div className="modalSale card-sales">
+					<Card data={data} />
+				</div>
 			</section>
 		</>
 	);

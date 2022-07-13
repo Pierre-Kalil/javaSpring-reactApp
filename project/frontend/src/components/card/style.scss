@@ -24,9 +24,10 @@
     }
 
     .title{
-      margin: 3px;
+      margin: 3px 0;
       font-size: 16px;
       color: #CFCFCF;
+      width: 4rem;
 
       &:nth-child(1){
         transform: translateX(-3px);
