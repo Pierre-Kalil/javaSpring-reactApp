@@ -7,14 +7,14 @@ export const Card = ({ data }: Idata) => {
 		<section className="card">
 			<ul className="card ul-sales">
 				{data &&
-					data.map((item, index) => (
+					data.map((sale, index) => (
 						<div key={index} className="card ul-sales info">
-							<span className="card ul-sales title desk">{item?.ID}</span>
-							<span className="card ul-sales title tab">{item?.data}</span>
-							<span className="card ul-sales title">{item?.vendedor}</span>
-							<span className="card ul-sales title desk">{item?.visitas}</span>
-							<span className="card ul-sales title desk">{item?.vendas}</span>
-							<span className="card ul-sales title">{item?.total}</span>
+							<span className="card ul-sales title desk">{sale?.id}</span>
+							<span className="card ul-sales title tab">{new Date(sale?.date).toLocaleDateString()}</span>
+							<span className="card ul-sales title">{sale?.sellerName}</span>
+							<span className="card ul-sales title desk">{sale?.visited}</span>
+							<span className="card ul-sales title desk">{sale?.deals}</span>
+							<span className="card ul-sales title">{sale?.amount.toFixed(2)}</span>
 							<span className="card ul-sales title">
 								<ButtonNotification />
 							</span>

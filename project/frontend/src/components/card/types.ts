@@ -1,12 +1,11 @@
 interface ISales {
-    ID?: string
-    data?: string
-    vendedor?: string
-    visitas?: string
-    vendas?: string
-    total?: string
-    notificar?: string
+	id: string;
+	amount: number;
+	date: string;
+	deals: number;
+	sellerName: string;
+	visited: number;
 }
-export interface Idata{
-    data: ISales[]
+export interface Idata {
+	data: ISales[];
 }

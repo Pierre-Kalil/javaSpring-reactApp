@@ -7,12 +7,16 @@ const SalesContext = createContext<ISalesProvider>({} as ISalesProvider);
 
 export const SalesProvider = ({ children }: IProviderChildrenProps) => {
 	const [sales, setSales] = useState<ISales[]>([]);
+  
+  const min: any = new Date().setDate(new Date().getDate() - 365);
+	const max: Date = new Date();
+	const [minDate, setMinDate] = useState(min);
+	const [maxDate, setMaxDate] = useState(max);
 
 	const getAllSales = () => {
 		api
 			.get("/sales")
 			.then((res) => {
-				console.log(res.data.content);
         setSales(res.data.content)
 			})
 			.catch((err) => {
@@ -21,7 +25,14 @@ export const SalesProvider = ({ children }: IProviderChildrenProps) => {
 	};
 
   return (
-    <SalesContext.Provider value={{getAllSales, sales}}>
+    <SalesContext.Provider value={{
+      getAllSales,
+      sales,
+      minDate,
+      setMinDate,
+      maxDate,
+      setMaxDate,
+      }}>
       {children}
     </SalesContext.Provider>
   )

@@ -3,105 +3,15 @@ import "./style.scss";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSales } from "../../provider/salesProvider";
 
 export const ModalSale = () => {
-	const data: any = [
-		{
-			ID: "1",
-			data: "data",
-			vendedor: "vendedor",
-			visitas: "visitas",
-			vendas: "vendas",
-			total: "total",
-			notificar: "notificar",
-		},
-		{
-			ID: "2",
-			data: "data",
-			vendedor: "vendedo",
-			visitas: "visitas",
-			vendas: "vendas",
-			total: "total",
-			notificar: "notificar",
-		},
-		{
-			ID: "2",
-			data: "data",
-			vendedor: "vendedo",
-			visitas: "visitas",
-			vendas: "vendas",
-			total: "total",
-			notificar: "notificar",
-		},
-		{
-			ID: "2",
-			data: "data",
-			vendedor: "vendedo",
-			visitas: "visitas",
-			vendas: "vendas",
-			total: "total",
-			notificar: "notificar",
-		},
-		{
-			ID: "2",
-			data: "data",
-			vendedor: "vendedo",
-			visitas: "visitas",
-			vendas: "vendas",
-			total: "total",
-			notificar: "notificar",
-		},
-		{
-			ID: "2",
-			data: "data",
-			vendedor: "vendedo",
-			visitas: "visitas",
-			vendas: "vendas",
-			total: "total",
-			notificar: "notificar",
-		},
-		{
-			ID: "2",
-			data: "data",
-			vendedor: "vendedo",
-			visitas: "visitas",
-			vendas: "vendas",
-			total: "total",
-			notificar: "notificar",
-		},
-		{
-			ID: "2",
-			data: "data",
-			vendedor: "vendedo",
-			visitas: "visitas",
-			vendas: "vendas",
-			total: "total",
-			notificar: "notificar",
-		},
-		{
-			ID: "2",
-			data: "data",
-			vendedor: "vendedo",
-			visitas: "visitas",
-			vendas: "vendas",
-			total: "total",
-			notificar: "notificar",
-		},
-		{
-			ID: "2",
-			data: "data",
-			vendedor: "vendedo",
-			visitas: "visitas",
-			vendas: "vendas",
-			total: "total",
-			notificar: "notificar",
-		},
-	];
-	const min: any = new Date().setDate(new Date().getDate() - 365);
-	const max: Date = new Date();
-	const [minDate, setMinDate] = useState(min);
-	const [maxDate, setMaxDate] = useState(max);
+	const {sales, getAllSales, minDate, setMinDate,maxDate, setMaxDate} = useSales()
+
+	useEffect(() => {
+		getAllSales()
+	},[])
 
 	return (
 		<>
@@ -131,7 +41,7 @@ export const ModalSale = () => {
 					<span className="modalSale header-scouts-titles">Notificar</span>
 				</div>
 				<div className="modalSale card-sales">
-					<Card data={data} />
+					<Card data={sales} />
 				</div>
 			</section>
 		</>
