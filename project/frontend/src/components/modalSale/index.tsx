@@ -1,17 +1,20 @@
-import { Card } from "../card";
 import "./style.scss";
+
+import { Card } from "../card";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useEffect, useState } from "react";
+
+import { useEffect } from "react";
 import { useSales } from "../../provider/salesProvider";
 
 export const ModalSale = () => {
-	const {sales, getAllSales, minDate, setMinDate,maxDate, setMaxDate} = useSales()
+	const { sales, getAllSales, minDate, setMinDate, maxDate, setMaxDate } =
+		useSales();
 
 	useEffect(() => {
-		getAllSales()
-	},[])
+		getAllSales();
+	}, [minDate, maxDate]);
 
 	return (
 		<>

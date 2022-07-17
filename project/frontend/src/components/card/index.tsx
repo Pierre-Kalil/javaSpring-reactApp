@@ -1,5 +1,7 @@
 import "./style.scss";
+
 import { Idata } from "./types";
+
 import { ButtonNotification } from "../buttonNotification";
 
 export const Card = ({ data }: Idata) => {

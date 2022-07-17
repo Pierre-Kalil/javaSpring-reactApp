@@ -1,4 +1,5 @@
 import "./style.scss";
+
 import notify from "../../assets/notify.png";
 
 export const ButtonNotification = () => {
