@@ -32,6 +32,7 @@ export const ModalSale = () => {
 						onChange={(date: Date) => setMaxDate(date)}
 						className="dsmeta-form-control"
 						dateFormat="dd/MM/yyyy"
+						withPortal={false}
 					/>
 				</div>
 				<div className="modalSale header-scouts">

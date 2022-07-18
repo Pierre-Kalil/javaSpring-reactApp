@@ -9,6 +9,10 @@
 	background-color: #283142;
 	border-radius: 5px;
 
+	@media(min-width: 768px){
+		width: 80%;
+	}
+
 	::-webkit-scrollbar {
 		display: none;
 	}
@@ -29,13 +33,17 @@
 		}
 
 		input {
-			width: 280px;
+			width: 90%;
 			padding: 12px;
 			margin: 5px;
 			border: 1px solid #384459;
 			border-radius: 5px;
 			background-color: #1b2531;
 			color: #9aaabe;
+
+			@media(min-width: 768px){
+				width: 250px;
+			}
 		}
 		::-webkit-input-placeholder {
 			color: #9aaabe;
