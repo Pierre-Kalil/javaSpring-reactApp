@@ -1,5 +1,5 @@
 interface ISales {
-	id: string;
+	id: number;
 	amount: number;
 	date: string;
 	deals: number;

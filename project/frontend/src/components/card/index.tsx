@@ -18,7 +18,7 @@ export const Card = ({ data }: Idata) => {
 							<span className="card ul-sales title desk">{sale?.deals}</span>
 							<span className="card ul-sales title">{sale?.amount.toFixed(2)}</span>
 							<span className="card ul-sales title">
-								<ButtonNotification />
+								<ButtonNotification id={sale.id} />
 							</span>
 						</div>
 					))}
